@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="w-60 h-60 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500 p-1">
               <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
                 <div className="w-56 h-56 rounded-full bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center text-white text-6xl font-bold">
-                  <img src="profile.jpg" alt="Aniket Warule" className="w-full h-full rounded-full " />
+                  <img src="/profile.jpg" alt="Aniket Warule" className="w-full h-full rounded-full " />
                 </div>
               </div>
             </div>

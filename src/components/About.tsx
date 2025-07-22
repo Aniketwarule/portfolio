@@ -91,7 +91,7 @@ const About = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('/resume.pdf', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1UpWY5xXur8iBgQoCOHvVDfRDb0ikzm08/view?usp=drive_link', '_blank')}
               className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-200"
             >
               <LucideView size={20} />
