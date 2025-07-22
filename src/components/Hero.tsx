@@ -1,7 +1,7 @@
 //import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Github, Linkedin, Twitter } from 'lucide-react';
-import profileImage from '../profile.jpg'; // Add this import
+import profileImage from '../../profile.jpg'; // Add this import
 
 const Hero = () => {
   const scrollToAbout = () => {
