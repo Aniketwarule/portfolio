@@ -55,6 +55,22 @@ export function Projects() {
             key={index}
             className="border border-neutral-300 dark:border-neutral-800 p-5 md:p-8 hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
           >
+            <div className="mb-5 overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-neutral-100 to-neutral-50 dark:from-neutral-900 dark:to-neutral-950">
+              <div className="h-28 md:h-32 p-4 flex flex-col justify-between">
+                <span className="font-mono text-[10px] tracking-wide uppercase text-neutral-500 dark:text-neutral-500">
+                  Project Preview
+                </span>
+                <div>
+                  <p className="font-mono text-sm md:text-base text-neutral-900 dark:text-neutral-100 line-clamp-1">
+                    {project.title}
+                  </p>
+                  <p className="font-mono text-[11px] text-neutral-500 dark:text-neutral-500 line-clamp-1 mt-1">
+                    {project.tech.slice(0, 3).join(' • ')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="flex items-start justify-between mb-4 gap-3">
               <h2 className="font-mono text-xl md:text-2xl text-neutral-900 dark:text-neutral-50">
                 {project.title}

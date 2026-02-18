@@ -37,9 +37,12 @@ export function Experience() {
 
       <div className="space-y-16">
         {experiences.map((exp, index) => (
-          <article key={index} className="relative group">
-            <div className="border-l-2 border-neutral-300 dark:border-neutral-800 pl-6 md:pl-8 pb-10 md:pb-12 transition-colors duration-200 group-hover:border-neutral-400 dark:group-hover:border-neutral-700">
-              <div className="absolute left-0 top-0 w-2 h-2 -ml-[5px] bg-neutral-900 dark:bg-neutral-50 rounded-full" />
+          <article key={index} className="relative group transition-transform duration-300 ease-out motion-safe:hover:translate-x-1">
+            <div className="border-l-2 border-neutral-300 dark:border-neutral-800 pl-6 md:pl-8 pb-10 md:pb-12 transition-colors duration-300 group-hover:border-neutral-400 dark:group-hover:border-neutral-700">
+              <div className="absolute left-0 top-0 -translate-x-1/2">
+                <span className="block w-3 h-3 bg-neutral-900 dark:bg-neutral-50 rounded-full transition-transform duration-300 ease-out motion-safe:group-hover:scale-110" />
+                <span className="absolute inset-0 rounded-full bg-neutral-400/40 dark:bg-neutral-500/40 opacity-0 scale-75 transition-all duration-300 ease-out motion-safe:group-hover:opacity-100 motion-safe:group-hover:scale-150" />
+              </div>
 
               <div className="mb-4">
                 <h2 className="font-mono text-xl md:text-2xl text-neutral-900 dark:text-neutral-50 mb-2">
@@ -64,7 +67,7 @@ export function Experience() {
                 {exp.highlights.map((highlight, idx) => (
                   <li
                     key={idx}
-                    className="text-neutral-600 dark:text-neutral-400 pl-4 relative before:content-['→'] before:absolute before:left-0 before:text-neutral-400 dark:before:text-neutral-600 break-words"
+                    className="text-neutral-600 dark:text-neutral-400 pl-4 relative before:content-['→'] before:absolute before:left-0 before:text-neutral-400 dark:before:text-neutral-600 break-words transition-transform duration-200 ease-out motion-safe:hover:translate-x-0.5"
                   >
                     {highlight}
                   </li>
