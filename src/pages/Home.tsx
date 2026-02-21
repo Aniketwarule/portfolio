@@ -31,6 +31,7 @@ export function Home() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [isFlipping, setIsFlipping] = useState(false);
   const [pokemonIndex, setPokemonIndex] = useState(0);
+  const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
   useEffect(() => {
     let timeoutId: number | undefined;
@@ -51,6 +52,32 @@ export function Home() {
       }
     };
   }, [flipCycleMs, flipMidMs, roles.length]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const updateVisitorCount = async () => {
+      try {
+        const response = await fetch('https://api.countapi.xyz/hit/aniketwarule.dev/home', {
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          return;
+        }
+
+        const data = (await response.json()) as { value?: number };
+        if (typeof data.value === 'number') {
+          setVisitorCount(data.value);
+        }
+      } catch {
+      }
+    };
+
+    void updateVisitorCount();
+
+    return () => controller.abort();
+  }, []);
 
   const famousPokemons = [
     {
@@ -243,6 +270,12 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      <div className="pb-6 md:pb-8 flex justify-center">
+        <p className="font-mono text-xs md:text-sm text-neutral-500 dark:text-neutral-500">
+          Visitors # {visitorCount !== null ? visitorCount.toLocaleString() : '...'}
+        </p>
+      </div>
 
       <button
         type="button"
