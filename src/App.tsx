@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
@@ -74,6 +75,7 @@ function App() {
       <main className="relative z-10 max-w-[900px] mx-auto px-6 md:px-12">
         {renderPage()}
       </main>
+      <Analytics />
     </div>
   );
 }
