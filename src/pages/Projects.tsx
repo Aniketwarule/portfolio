@@ -3,6 +3,14 @@ import { ExternalLink, Github } from 'lucide-react';
 export function Projects() {
   const projects = [
     {
+      title: 'Ignition',
+      description:
+        'A blockchain-powered infrastructure that enables AI agents to autonomously access and pay for AI APIs in real time using sub-cent micropayments, eliminating subscriptions and manual transaction approvals.',
+      tech: ['React', 'Algorand' ,'TypeScript', 'Node.js', 'AI APIs'],
+      github: 'https://github.com/Aniketwarule/Crazy8_Ignition',
+      live: 'https://devfolio.co/projects/ignition-b005',
+    },
+    {
       title: 'VentureBloom',
       description:
         'AI-driven platform for startup validation and investor matching using React. Modular architecture enabling campaign management, business analytics, and sector-based recommendations. Real-time data processing and scalable frontend UI/UX across distributed systems.',

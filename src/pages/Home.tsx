@@ -25,13 +25,12 @@ import {
 import { TbSql } from 'react-icons/tb';
 
 export function Home() {
-  const roles = ['Developer', 'ShitPoster', 'Web3 builder', 'Engineer'];
+  const roles = ['Developer', 'ShitPoster', 'Web3 builder', 'Engineer','Full Stack Dev','Late Night Coder'];
   const flipCycleMs = 1800;
   const flipMidMs = 260;
   const [roleIndex, setRoleIndex] = useState(0);
   const [isFlipping, setIsFlipping] = useState(false);
   const [pokemonIndex, setPokemonIndex] = useState(0);
-  const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
   useEffect(() => {
     let timeoutId: number | undefined;
@@ -53,31 +52,6 @@ export function Home() {
     };
   }, [flipCycleMs, flipMidMs, roles.length]);
 
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const updateVisitorCount = async () => {
-      try {
-        const response = await fetch('https://api.countapi.xyz/hit/aniketwarule.dev/home', {
-          signal: controller.signal,
-        });
-
-        if (!response.ok) {
-          return;
-        }
-
-        const data = (await response.json()) as { value?: number };
-        if (typeof data.value === 'number') {
-          setVisitorCount(data.value);
-        }
-      } catch {
-      }
-    };
-
-    void updateVisitorCount();
-
-    return () => controller.abort();
-  }, []);
 
   const famousPokemons = [
     {
@@ -139,6 +113,7 @@ export function Home() {
   ];
 
   const achievements = [
+    'Winner: Ignition HackVerse 2026',
     'Winner: AlgoBharat Hackersies 2025',
     'Winner: Hack-Sphere 2025',
     'Runner-up: Innoverse 2025 (PVGCOET)',
@@ -270,12 +245,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
-      <div className="pb-6 md:pb-8 flex justify-center">
-        <p className="font-mono text-xs md:text-sm text-neutral-500 dark:text-neutral-500">
-          Visitors # {visitorCount !== null ? visitorCount.toLocaleString() : '...'}
-        </p>
-      </div>
 
       <button
         type="button"
