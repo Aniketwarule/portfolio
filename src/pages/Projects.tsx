@@ -24,6 +24,7 @@ export function Projects() {
         'Multi-chain platform (Avalanche & Algorand) launching DAOs in under 5 mins. Developed interoperable smart contracts using Solidity and PyTeal for secure voting and treasury management. Built scalable no-code interface with Next.js.',
       tech: ['Next.js', 'Solidity', 'PyTeal', 'Algorand', 'Avalanche'],
       github: 'https://github.com/Aniketwarule/DAOShip',
+      live: 'https://dao-ship.vercel.app/',
     },
     {
       title: 'Decentralized Donation Platform',
