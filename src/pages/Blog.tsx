@@ -1,6 +1,6 @@
 export function Blog() {
   return (
-    <div className="min-h-screen pt-32 md:pt-60 pb-10 md:pb-12">
+    <div className="min-h-screen pt-24 md:pt-36 pb-6 md:pb-8">
       <div className="mb-10">
         <h1 className="font-mono text-2xl md:text-5xl font-normal tracking-normal text-[rgb(131,98,63)] dark:text-[rgb(235,209,183)] mb-3">
           Blog

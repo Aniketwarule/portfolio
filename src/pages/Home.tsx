@@ -25,7 +25,7 @@ import {
 import { TbSql } from 'react-icons/tb';
 
 export function Home() {
-  const roles = ['Developer', 'ShitPoster', 'Web3 builder', 'Engineer','Full Stack Dev','Late Night Coder'];
+  const roles = ['Developer', 'ShitPoster', 'Web3 builder', 'Engineer','Full Stack Dev'];
   const flipCycleMs = 1800;
   const flipMidMs = 260;
   const [roleIndex, setRoleIndex] = useState(0);
@@ -121,14 +121,14 @@ export function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <section className="pt-32 md:pt-60 pb-10 md:pb-12">
-        <div className="space-y-4">
+    <div className="min-h-screen flex flex-col justify-center pt-20">
+      <section className="pb-6 md:pb-8">
+        <div className="space-y-3">
           <div className="space-y-1">
               <h1 className="group font-mono text-2xl md:text-5xl font-normal tracking-normal text-[rgb(131,98,63)] dark:text-[rgb(235,209,183)] transition-transform duration-200 ease-out motion-safe:hover:scale-[1.02] origin-left">
                 Aniket Warule
                 <BadgeCheck className="inline-block w-5 h-5 md:w-7 md:h-7 align-middle mx-3 text-sky-500 dark:text-sky-400 transition-transform duration-200 ease-out motion-safe:group-hover:scale-110" aria-label="Verified" />
-                <span className="font-mono text-base md:text-md font-normal tracking-normal text-neutral-600 dark:text-neutral-400 mt-2"> | 21, Pune IND
+                <span className="font-mono text-base md:text-md font-normal tracking-normal text-neutral-600 dark:text-neutral-400 mt-2"> | 22, Pune IND
                 </span>
               </h1>
               <p className="font-mono text-base md:text-md text-neutral-600 dark:text-neutral-400 tracking-tight">
@@ -150,7 +150,7 @@ export function Home() {
           <p className="text-base md:text-lg leading-relaxed text-neutral-900 dark:text-neutral-300 max-w-2xl">
             Engineering student who builds, not just studies.
           </p>
-          <div className="text-base md:text-lg leading-relaxed text-neutral-500 dark:text-neutral-500 max-w-4xl space-y-2">
+          <div className="text-base md:text-lg leading-relaxed text-neutral-500 dark:text-neutral-500 max-w-4xl space-y-1">
             <p>
               Full-stack developer focused on backend architecture and clean frontend execution.
               Building products that move from idea to working software fast.
@@ -164,7 +164,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">   
+        <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4">   
           <a
             href="https://github.com/aniketwarule"
             target="_blank"
@@ -212,7 +212,7 @@ export function Home() {
           </a>
         </div>
       </section>
-      <section className="pb-10 md:pb-12">
+      <section className="pb-6 md:pb-8">
         <div className="grid grid-cols-1 md:grid-cols-[1.45fr_0.85fr] gap-8 md:gap-4 items-start">
           <div>
             <h2 className="font-mono text-2xl md:text-xl font-normal tracking-tight text-neutral-900 dark:text-neutral-300 mb-4">
@@ -242,6 +242,22 @@ export function Home() {
                 </p>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="mt-6 md:mt-8">
+          <h2 className="font-mono text-2xl md:text-xl font-normal tracking-tight text-neutral-900 dark:text-neutral-300 mb-4">
+            Competitive Programming #
+          </h2>
+          <div className="space-y-1">
+            <p className="font-mono text-sm md:text-base text-neutral-500 dark:text-neutral-500 break-words">
+              <span className="text-neutral-900 dark:text-neutral-300 font-medium"> &gt; </span>
+              Solved 450+ data structures and algorithms problems across <a href="https://leetcode.com/u/aniketwarule/" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-neutral-300 underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-100">LeetCode</a> and <a href="https://codeforces.com/profile/aniketwarule" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-neutral-300 underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-100">Codeforces</a>.
+            </p>
+            <p className="font-mono text-sm md:text-base text-neutral-500 dark:text-neutral-500 break-words">
+              <span className="text-neutral-900 dark:text-neutral-300 font-medium"> &gt; </span>
+              Consistently participate in contests across <a href="https://leetcode.com/u/aniketwarule/" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-neutral-300 underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-100">LeetCode</a> and <a href="https://codeforces.com/profile/aniketwarule" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-neutral-300 underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-100">Codeforces</a>.
+            </p>
           </div>
         </div>
       </section>
